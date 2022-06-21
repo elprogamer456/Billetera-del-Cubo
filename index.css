@@ -1,0 +1,523 @@
+/*body{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background: #050801;
+}*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+  
+body{
+    min-width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background:black;
+    perspective: 20em;
+    perspective-origin: 77px 100px ;
+}
+/**/
+.titulo{
+    position: absolute;
+    font-size: 25px;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: green;
+    text-align: center;
+    margin-top: -70px;
+    animation: color 35s infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes color{
+    to {filter: hue-rotate(360deg);
+        -webkit-box-reflect: below 1px linear-gradient(transparent,#0005);}
+}
+
+.titulo:defined{
+    background: green;
+    color: #adadad;
+    box-shadow: 0 0 10px green,
+                0 0 50px green,
+                0 0 100px green,
+                0 0 400px green;
+    -webkit-box-reflect: below 1px linear-gradient(transparent,#0005);
+}
+
+.formulario form{
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+form .username{
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 45px 0;
+}
+
+.username input{
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 24px;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.username label{
+    position: absolute;
+    top: 125%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 18px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.username span::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: green;
+    transition: .5s;
+}
+
+.username input:focus ~ label,
+.username input:focus ~ label{
+    top: -5px;
+    color: teal;
+}
+
+.username input:span::before,
+.username input:span::before{
+  top: 100%;
+}
+
+.username:defined{
+    background: green;
+    color: #050801;
+    animation: color 35s infinite;
+    animation-timing-function: linear;
+    box-shadow: 0 0 1px green,
+                0 0 5px green,
+                0 0 10px green,
+                0 0 40px green;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+}
+
+.username:hover{
+    color: #050801;
+    box-shadow: 0 0 1px green,
+                0 0 5px green,
+                0 0 10px green,
+                0 0 40px green;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+    filter: hue-rotate(180deg);
+    transition: .5s;
+}
+
+.recordar{
+    color: green;
+    cursor: pointer;
+    font-size: 24px;
+    margin: 15px 0;
+    animation: color3D 35s infinite;
+    animation-timing-function: linear;
+}
+
+.recordar:hover{
+    text-decoration: underline;
+}
+
+input[type = "submit"]{
+    width: 100%;
+    height: 50px;
+    border: 1px solid;
+    background: green;
+    font-size: 18px;
+    color: #adadad;
+    cursor: pointer;
+    outline: none;
+    animation: color 35s infinite;
+    animation-timing-function: linear;
+    box-shadow: 0 0 5px green,
+                0 0 25px green,
+                0 0 50px green,
+                0 0 200px green;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+}
+  
+input[type = "submit"]:hover{
+    box-shadow: 0 0 5px green,
+                0 0 25px green,
+                0 0 50px green,
+                0 0 200px green;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+    filter: hue-rotate(180deg);
+    transition: .5s;
+}
+
+.registrarse{
+    margin: 30px;
+    text-align: center;
+    font-size: 24px;
+    color: #adadad;
+}
+  
+.registrarse a{
+    color: green;
+    text-decoration: none;
+    animation: color 35s infinite;
+    animation-timing-function: linear;
+}
+  
+.registrarse a:hover{
+    text-decoration: underline;
+}
+/**/
+.cube{
+    font-size: 50px;
+    position: relative;
+    transform-style: preserve-3d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: animate 15s linear infinite;
+    /*animation: color3D 35s infinite;
+    animation-timing-function: linear;*/
+}
+
+@keyframes color3D{
+    to {
+        filter: hue-rotate(360deg);
+    }
+}
+
+@keyframes animate{
+    to{
+        transform: rotateY(360deg);
+    }
+}
+
+.shadow{
+    position: absolute;
+    background: aqua;
+    font-size: 50px;
+    width: 2em;
+    height: 2em;
+    transform:translateZ(-130px)
+    rotateX(90deg) rotateZ(3deg);
+    bottom: 0em;  left: 4em;
+    box-shadow: 0 120px 100px 10px blue, 
+                50px 120px 200px 10px blue;
+    filter: blur(100px);
+    animation: colorShadow 15s infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes colorShadow{
+    5%{
+        box-shadow: 0 120px 100px 10px #4c00ff, 
+                50px 120px 200px 10px #4c00ff;
+    } 10%{
+        box-shadow: 0 120px 100px 10px #9900ff, 
+                50px 120px 200px 10px #9900ff;
+    } 15%{
+        box-shadow: 0 120px 100px 10px #e600ff, 
+                50px 120px 200px 10px #e600ff;
+    } 20%{
+        box-shadow: 0 120px 100px 10px #ff00cc, 
+                50px 120px 200px 10px #ff00cc;
+    } 25%{
+        box-shadow: 0 120px 100px 10px #ff0080, 
+                50px 120px 200px 10px #ff0080;
+    } 30%{
+        box-shadow: 0 120px 100px 10px #ff0033,
+                50px 120px 200px 10px #ff0033;
+    } 35%{
+        box-shadow: 0 120px 100px 10px #ff1900,
+                50px 120px 200px 10px #ff1900;
+    } 40%{
+        box-shadow: 0 120px 100px 10px #ff6600,
+                50px 120px 200px 10px #ff6600;
+    } 45%{
+        box-shadow: 0 120px 100px 10px #ffb300,
+                50px 120px 200px 10px #ffb300;
+    } 50%{
+        box-shadow: 0 120px 100px 10px #ffff00,
+                50px 120px 200px 10px #ffff00;
+    } 55%{
+        box-shadow: 0 120px 100px 10px #b3ff00,
+                50px 120px 200px 10px #b3ff00;
+    } 60%{
+        box-shadow: 0 120px 100px 10px #66ff00,
+                50px 120px 200px 10px #66ff00;
+    } 65%{
+        box-shadow: 0 120px 100px 10px #1aff00,
+                50px 120px 200px 10px #1aff00;
+    } 70%{
+        box-shadow: 0 120px 100px 10px #00ff33,
+                50px 120px 200px 10px #00ff33;
+    } 75%{
+        box-shadow: 0 120px 100px 10px #00ff80,
+                50px 120px 200px 10px #00ff80;
+    } 80%{
+        box-shadow: 0 120px 100px 10px #00ffcc,
+                50px 120px 200px 10px #00ffcc;
+    } 85%{
+        box-shadow: 0 120px 100px 10px #00e5ff,
+                50px 120px 200px 10px #00e5ff;
+    } 90%{
+        box-shadow: 0 120px 100px 10px #0099ff,
+                50px 120px 200px 10px #0099ff;
+    } 95%{
+        box-shadow: 0 120px 100px 10px #004cff,
+                50px 120px 200px 10px #004cff;
+    } 100%{
+        bbox-shadow: 0 120px 100px 10px blue,
+        50px 120px 200px 10px blue;
+    }
+}
+
+.top, .bottom, .left, .right, .front , .back{
+    height: 2em;
+    width: 2em;
+    background: aqua;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    box-shadow: 0 0 50px 10px blue inset,
+                0 0 0 2em aqua inset ;
+    animation: color3D 15s infinite;
+    animation-timing-function: linear;
+}
+
+.front{
+    transform: translateZ(1em);
+}
+  
+.back{
+    transform: translateZ(-1em);
+}
+  
+.top{
+    transform: translateY(-1em) rotateX(90deg);
+}
+  
+.bottom{
+    transform: translateY(1em) rotateX(90deg);
+}
+  
+.right{
+    transform: translateX(1em) rotateY(90deg);
+}
+  
+.left{
+    transform: translateX(-1em) rotateY(90deg);
+}
+
+.cuadrado{
+    font-size: 50px;
+    position: relative;
+    transform-style: preserve-3d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: animate 15s linear infinite;
+    -webkit-box-reflect: below 1px cube-gradient(transparent, #0005);
+}
+
+/*.left2, .right2, .front2, .back2{
+    height: 3em;
+    width: 1em;
+    background: aqua;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    box-shadow: 0 0 50px 10px blue inset,
+                0 0 0 2em aqua inset ;
+}
+
+.top2, .bottom2{
+    height: 1em;
+    width: 1em;
+    background: aqua;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    box-shadow: 0 0 50px 10px blue inset,
+                0 0 0 2em aqua inset ;
+}*/
+
+.cuadrado span:nth-child(1){
+    height: 3em;
+    width: 1em;
+    background: aqua;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    box-shadow: 0 0 25px 5px blue inset,
+                0 0 0 2em aqua inset ;
+    transform: translateZ(0em);
+    animation: color3D 15s infinite;
+    animation-timing-function: linear;
+}
+
+.cuadrado span:nth-child(2){
+    height: 3em;
+    width: 1em;
+    background: aqua;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    box-shadow: 0 0 25px 5px blue inset,
+                0 0 0 2em aqua inset ;
+    transform: translateZ(-0.5em);
+    animation: color3D 15s infinite;
+    animation-timing-function: linear;
+}
+  
+/*.back2{
+    transform: translateZ(-0.5em);
+}
+  
+.top2{
+    transform: translateY(-0.5em) rotateX(90deg);
+}
+  
+.bottom2{
+    transform: translateY(2.5em) rotateX(90deg);
+}
+  
+.right2{
+    transform: translateX(0.5em) rotateY(90deg);
+}
+  
+.left2{
+    transform: translateX(-0.5em) rotateY(90deg);
+}*/
+
+/*a{
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 20px 25px;
+    color: #03e9f4;
+    overflow: hidden;
+}
+
+a:hover{
+    background: #03e9f4;
+    color: #050801;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 200px #03e9f4;
+-webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+}
+
+a:nth-child(1){
+    filter: hue-rotate(270deg);
+}
+
+a:nth-child(3){
+    filter: hue-rotate(110deg);
+}
+
+a span{
+    position: absolute;
+    display: block;
+}
+
+a span:nth-child(1){
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #03e9f4);
+    animation: animate 1s linear infinite;
+}
+
+@keyframes animate{
+    0%{
+        left: -100%;
+    }
+
+    50%, 100%{
+        left: 100%;
+    }
+}
+
+a span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #03e9f4);
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.25s;
+}
+
+@keyframes animate2{
+    0%{
+        top: -100%;
+    }
+
+    50%, 100%{
+        top: 100%;
+    }
+}
+
+a span:nth-child(3){
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #03e9f4);
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.5s;
+}
+
+@keyframes animate3{
+    0%{
+       right: -100%;
+    }
+
+    50%, 100%{
+        right: 100%;
+    }
+}
+
+a span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #03e9f4);
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.75s;
+}
+
+@keyframes animate4{
+    0%{
+        bottom: -100%;
+    }
+
+    50%, 100%{
+        bottom: 100%;
+    }
+}*/
