@@ -170,14 +170,14 @@ a:hover{
     transition: .5s;
 }
 
-.registrarse{
+a{
     margin: 30px;
     text-align: center;
     font-size: 24px;
     color: #adadad;
 }
   
-.registrarse a{
+.a{
     width: 100%;
     height: 50px;
     border: 1px solid;
@@ -195,7 +195,7 @@ a:hover{
     -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
 }
   
-.registrarse a:hover{
+a:hover{
     box-shadow: 0 0 5px green,
                 0 0 25px green,
                 0 0 50px green,
