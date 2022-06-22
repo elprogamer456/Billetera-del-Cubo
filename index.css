@@ -141,7 +141,7 @@ form .username{
     transition: .5s;
 }*/
 
-.username span::before{
+/*.username span::before{
     content: '';
     position: absolute;
     top: 40px;
@@ -150,7 +150,7 @@ form .username{
     height: 2px;
     background: #03e9f4;
     transition: .5s;
-}
+}*/
 
 .username input:focus ~ label,
 .username input:focus ~ label{
