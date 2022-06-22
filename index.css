@@ -30,7 +30,7 @@ body{
     display: inline-block;
     text-decoration: none;
     text-transform: uppercase;
-    color: green;
+    color: #03e9f4;
     text-align: center;
     margin-top: -70px;
     animation: color 35s infinite;
@@ -43,13 +43,57 @@ body{
 }
 
 .titulo:defined{
-    background: green;
+    background: #03e9f4;
     color: #adadad;
-    box-shadow: 0 0 10px green,
-                0 0 50px green,
-                0 0 100px green,
-                0 0 400px green;
+    box-shadow: 0 0 10px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 100px #03e9f4,
+                0 0 400px #03e9f4;
     -webkit-box-reflect: below 1px linear-gradient(transparent,#0005);
+}
+
+.titulo span{
+    position: absolute;
+    display: block;
+}
+
+.titulo span:nth-child(1){
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #03e9f4);
+    animation: animate 1s linear infinite;
+}
+
+.titulo span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #03e9f4);
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.25s;
+}
+
+.titulo span:nth-child(3){
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #03e9f4);
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.5s;
+}
+
+.titulo span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #03e9f4);
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.75s;
 }
 
 .formulario form{
@@ -64,16 +108,25 @@ form .username{
 }
 
 .username input{
-    width: 100%;
+    /*width: 100%;
     padding: 0 5px;
     height: 40px;
     font-size: 24px;
     border: none;
     background: none;
-    outline: none;
+    outline: none;*/
+	position: relative;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 20px 25px;
+    color: #03e9f4;
+    overflow: hidden;
+    animation: color 35s infinite;
+    animation-timing-function: linear;
 }
 
-.username label{
+/*.username label{
     position: absolute;
     top: 125%;
     left: 5px;
@@ -82,7 +135,7 @@ form .username{
     font-size: 18px;
     pointer-events: none;
     transition: .5s;
-}
+}*/
 
 .username span::before{
     content: '';
@@ -91,7 +144,7 @@ form .username{
     left: 0;
     width: 100%;
     height: 2px;
-    background: green;
+    background: #03e9f4;
     transition: .5s;
 }
 
@@ -107,26 +160,70 @@ form .username{
 }
 
 .username:defined{
-    background: green;
+    background:  #03e9f4;
     color: #050801;
     animation: color 35s infinite;
     animation-timing-function: linear;
-    box-shadow: 0 0 1px green,
-                0 0 5px green,
-                0 0 10px green,
-                0 0 40px green;
+    box-shadow: 0 0 1px #03e9f4,
+                0 0 5px #03e9f4,
+                0 0 10px #03e9f4,
+                0 0 40px #03e9f4;
     -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
 }
 
 .username:hover{
     color: #050801;
-    box-shadow: 0 0 1px green,
-                0 0 5px green,
-                0 0 10px green,
-                0 0 40px green;
+    box-shadow: 0 0 1px #03e9f4,
+                0 0 5px #03e9f4,
+                0 0 10px #03e9f4,
+                0 0 40px #03e9f4;
     -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
     filter: hue-rotate(180deg);
     transition: .5s;
+}
+
+.username span{
+    position: absolute;
+    display: block;
+}
+
+.username span:nth-child(1){
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #03e9f4);
+    animation: animate 1s linear infinite;
+}
+
+.username span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #03e9f4);
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.25s;
+}
+
+.username span:nth-child(3){
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #03e9f4);
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.5s;
+}
+
+.username span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #03e9f4);
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.75s;
 }
 
 .recordar{
@@ -150,6 +247,8 @@ a{
     padding: 20px 25px;
     color: #03e9f4;
     overflow: hidden;
+    animation: color 35s infinite;
+    animation-timing-function: linear;
 }
 
 a:hover{
@@ -409,7 +508,6 @@ a span:nth-child(4){
     box-shadow: 0 0 50px 10px blue inset,
                 0 0 0 2em aqua inset ;
 }
-
 .top2, .bottom2{
     height: 1em;
     width: 1em;
@@ -478,7 +576,6 @@ a span:nth-child(4){
     color: #03e9f4;
     overflow: hidden;
 }
-
 a:hover{
     background: #03e9f4;
     color: #050801;
@@ -488,20 +585,16 @@ a:hover{
                 0 0 200px #03e9f4;
 -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
 }
-
 a:nth-child(1){
     filter: hue-rotate(270deg);
 }
-
 a:nth-child(3){
     filter: hue-rotate(110deg);
 }
-
 a span{
     position: absolute;
     display: block;
 }
-
 a span:nth-child(1){
     top: 0;
     left: 0;
@@ -510,17 +603,14 @@ a span:nth-child(1){
     background: linear-gradient(90deg, transparent, #03e9f4);
     animation: animate 1s linear infinite;
 }
-
 @keyframes animate{
     0%{
         left: -100%;
     }
-
     50%, 100%{
         left: 100%;
     }
 }
-
 a span:nth-child(2){
     top: -100%;
     right: 0;
@@ -530,17 +620,14 @@ a span:nth-child(2){
     animation: animate2 1s linear infinite;
     animation-delay: 0.25s;
 }
-
 @keyframes animate2{
     0%{
         top: -100%;
     }
-
     50%, 100%{
         top: 100%;
     }
 }
-
 a span:nth-child(3){
     bottom: 0;
     right: 0;
@@ -550,17 +637,14 @@ a span:nth-child(3){
     animation: animate3 1s linear infinite;
     animation-delay: 0.5s;
 }
-
 @keyframes animate3{
     0%{
        right: -100%;
     }
-
     50%, 100%{
         right: 100%;
     }
 }
-
 a span:nth-child(4){
     bottom: -100%;
     left: 0;
@@ -570,12 +654,10 @@ a span:nth-child(4){
     animation: animate4 1s linear infinite;
     animation-delay: 0.75s;
 }
-
 @keyframes animate4{
     0%{
         bottom: -100%;
     }
-
     50%, 100%{
         bottom: 100%;
     }
