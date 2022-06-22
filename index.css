@@ -42,7 +42,7 @@ body{
         -webkit-box-reflect: below 1px linear-gradient(transparent,#0005);}
 }
 
-.titulo:defined{
+/*.titulo:defined{
     background: #03e9f4;
     color: #adadad;
     box-shadow: 0 0 10px #03e9f4,
@@ -50,7 +50,7 @@ body{
                 0 0 100px #03e9f4,
                 0 0 400px #03e9f4;
     -webkit-box-reflect: below 1px linear-gradient(transparent,#0005);
-}
+}*/
 
 .titulo span{
     position: absolute;
