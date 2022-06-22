@@ -107,7 +107,7 @@ body{
 
 form .username{
     position: relative;
-    border-bottom: 2px solid #adadad;
+    /*border-bottom: 2px solid #adadad;*/
     margin: 45px 0;
 }
 
