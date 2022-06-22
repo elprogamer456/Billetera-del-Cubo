@@ -186,10 +186,10 @@ form .username{
     transition: .5s;
 }
 
-/*.username span{
+.username span{
     position: absolute;
     display: block;
-}*/
+}
 
 .username span:nth-child(1){
     top: 0;
