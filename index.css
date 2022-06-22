@@ -164,8 +164,8 @@ form .username{
 }
 
 .username:defined{
-    background:  #03e9f4;
-    color: #050801;
+    background: #050801;
+    color: #03e9f4;
     animation: color 35s infinite;
     animation-timing-function: linear;
     box-shadow: 0 0 1px #03e9f4,
