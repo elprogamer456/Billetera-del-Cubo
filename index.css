@@ -38,6 +38,10 @@ body{
 }
 
 @keyframes color{
+    to {filter: hue-rotate(360deg);}
+}
+
+@keyframes colorBoton{
     to {filter: hue-rotate(360deg);
         -webkit-box-reflect: below 1px linear-gradient(transparent,#0005);}
 }
@@ -247,7 +251,7 @@ a{
     padding: 20px 25px;
     color: #03e9f4;
     overflow: hidden;
-    animation: color 35s infinite;
+    animation: colorBoton 35s infinite;
     animation-timing-function: linear;
 }
 
