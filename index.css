@@ -67,7 +67,7 @@ body{
     width: 100%;
     height: 2px;
     background: linear-gradient(90deg, transparent, #03e9f4);
-    animation: animate 1s linear infinite;
+    animation: animate 3s linear infinite;
 }
 
 .titulo span:nth-child(2){
@@ -76,7 +76,7 @@ body{
     width: 2px;
     height: 100%;
     background: linear-gradient(180deg, transparent, #03e9f4);
-    animation: animate2 1s linear infinite;
+    animation: animate2 3s linear infinite;
     animation-delay: 0.25s;
 }
 
@@ -86,7 +86,7 @@ body{
     width: 100%;
     height: 2px;
     background: linear-gradient(270deg, transparent, #03e9f4);
-    animation: animate3 1s linear infinite;
+    animation: animate3 3s linear infinite;
     animation-delay: 0.5s;
 }*/
 
@@ -96,7 +96,7 @@ body{
     width: 2px;
     height: 100%;
     background: linear-gradient(360deg, transparent, #03e9f4);
-    animation: animate4 1s linear infinite;
+    animation: animate4 3s linear infinite;
     animation-delay: 0.75s;
 }
 
