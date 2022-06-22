@@ -189,7 +189,7 @@ form .username{
 /*.username span{
     position: absolute;
     display: block;
-}
+}*/
 
 .username span:nth-child(1){
     top: 0;
@@ -200,7 +200,7 @@ form .username{
     animation: animate 1s linear infinite;
 }
 
-.username span:nth-child(2){
+/*.username span:nth-child(2){
     top: -100%;
     right: 0;
     width: 2px;
